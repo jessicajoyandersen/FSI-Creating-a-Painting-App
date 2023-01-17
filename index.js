@@ -26,3 +26,8 @@ green.addEventListener('click', function(e){
     console.log('color_green');
     selectedColor = 'green'
 })
+
+painting.addEventListener('dblclick', function(e){
+    e.target.style.backgroundColor = 'white'
+    console.log('erase')
+})
