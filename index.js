@@ -14,6 +14,10 @@ blue.addEventListener('click', function(e){
     console.log('color_blue');
     selectedColor = 'blue'
 })
+purple.addEventListener('click', function(e){
+    console.log('color_purple');
+    selectedColor = 'purple'
+})
 red.addEventListener('click', function(e){
     console.log('color_red');
     selectedColor = 'red'
