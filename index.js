@@ -1,10 +1,12 @@
+//defaut color
 let selectedColor = 'blue';
-const painting = document.querySelector('.painting');
+let painting = document.querySelector('.painting');
 painting.addEventListener('click', function(e){
     e.target.style.backgroundColor = selectedColor;
     console.log('paint');
 })
 
+//color options
 const blue = document.querySelector('#blue');
 const red = document.querySelector('#red');
 const yellow = document.querySelector('#yellow');
@@ -31,7 +33,22 @@ green.addEventListener('click', function(e){
     selectedColor = 'green'
 })
 
+//eraser
 painting.addEventListener('dblclick', function(e){
     e.target.style.backgroundColor = 'white'
-    console.log('erase')
+    console.log('erase');
+})
+
+//wipe canvas
+let clearButton = document.getElementById('clear');
+const pixels = document.querySelector('.painting').querySelectorAll('.pixel');
+
+function clearCanvas(){
+    for (let i = 0; i < pixels.length; i++){
+        pixels[i].style.backgroundColor = null;  
+        console.log('canvas cleared'); 
+    }
+}
+clearButton.addEventListener('click', function(){
+        clearCanvas();
 })
